@@ -18,17 +18,8 @@ jobs:
         with:
           python-version: '3.10'
       
-      - name: Install dependencies
-        run: pip install -r requirements.txt
-      
       - name: Build
-        run: |
-          # Здесь можно добавить команды для сборки вашего проекта (если требуется)
-          # Например, если у вас есть команда для сборки проекта с помощью Makefile:
-          make build
+        run: python проверка.py build
       
       - name: Run tests
-        run: |
-          # Здесь можно добавить команды для запуска тестов
-          # Например, если у вас есть команда для запуска тестов с помощью pytest:
-          inittest
+        run: python test_laba2.py unittest 
