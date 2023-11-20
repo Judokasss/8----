@@ -8,6 +8,7 @@ class UtilityFunctions:
         # Проверка на пустоту
         if not arr:
             raise ValueError("Нельзя ввести пустоту.")
+            raise ValueError("Нельзя ввести пустоту.")
         
         # Проверка на целые числа
         for item in arr:
