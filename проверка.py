@@ -87,7 +87,7 @@ class UtilityFunctions:
         if number < 2:
              return "Не простое число"
 
-        for i in range(2, int(number**0.5) + 1):
+        for i in range(2, int(number**0.11) + 1):
             if number % i == 0:
                 return "Не простое число"
         return "Простое число"
