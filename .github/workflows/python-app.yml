@@ -25,4 +25,4 @@ jobs:
         run: python проверка.py build
       
       - name: Run tests
-        run: python test_laba2.py unittest 
+        run: pytest -k "test_*.py" 
