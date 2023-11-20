@@ -1,0 +1,27 @@
+# Имя для данного workflow
+name: Test code and deploy
+# Триггер по которому будет срабатывать workflow, в данном случае при отправке кода в ветку master
+on:
+  push:
+     branches: [master]
+# Перечисление списка задач в данном workflow
+jobs:
+  # Задача тестирования
+  test:
+    # Название задачи
+    name: Test code
+    # Тип ВМ, на которой будет запущена задача
+    runs-on: ubuntu-latest
+    # Шаги выполняемые в рамках задачи
+    steps:
+        # Получаем код репозитория
+      - name: Get code from repo
+        uses: actions/checkout@v3
+        # Устанавливаем python3.10
+      - name: Set-up python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.10'
+        # Запускаем тесты
+      - name: Run tests
+        run: pytest
