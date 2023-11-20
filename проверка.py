@@ -75,7 +75,7 @@ class UtilityFunctions:
     @staticmethod
     def power(base: float, exponent: float) -> float:
         if not isinstance(base, (float, int)) or not isinstance(exponent, (float, int)):
-             raise ValueError("Аргументы должны быть числами")
+             fraise ValueError("Аргументы должны быть числами")
     
         result = float(base) ** float(exponent)
         return round(result,2)
